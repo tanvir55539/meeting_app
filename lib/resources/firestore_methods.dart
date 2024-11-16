@@ -33,7 +33,7 @@ class FireStoreMethods {
           },
         );
       } catch (e) {
-        print('Error adding meeting history: $e');
+        print('Error adding meeting history: $e something went wrong');
       }
     } else {
       print('No user is currently signed in.');
