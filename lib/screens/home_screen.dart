@@ -1,5 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:meeting_app/resources/auth_method.dart';
+import 'package:meeting_app/screens/history_meeting_screen.dart';
+import 'package:meeting_app/screens/meeting_screen.dart';
+import 'package:meeting_app/screens/profile_screen.dart';
 import 'package:meeting_app/utils/colors.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -74,7 +78,17 @@ class _HomeScreenState extends State<HomeScreen> {
         type: BottomNavigationBarType.fixed,
         unselectedFontSize: 14,
         items: const [
-          
+          BottomNavigationBarItem(
+            icon: Icon(Icons.comment_bank),
+            label: 'Meet & Chat',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.lock_clock),
+            label: 'Meetings',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_outline),
+            label: 'Profile',
           ),
         ],
       ),
