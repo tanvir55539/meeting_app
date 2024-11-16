@@ -18,5 +18,25 @@ class FireStoreMethods {
     }
   }
 
-
+  Future<void> addMeetingHistory(String meetingName) async {
+    final currentUser = _auth.currentUser;
+    if (currentUser != null) {
+      try {
+        await _firestore
+            .collection('users')
+            .doc(currentUser.uid)
+            .collection('meetings')
+            .add(
+          {
+            'meetingName': meetingName,
+            'createdAt': DateTime.now(),
+          },
+        );
+      } catch (e) {
+        print('Error adding meeting history: $e');
+      }
+    } else {
+      print('No user is currently signed in.');
+    }
+  }
 }
