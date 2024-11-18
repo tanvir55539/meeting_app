@@ -23,28 +23,28 @@ class HomeMeetingButton extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
                 color: buttonColor,
-                borderRadius: BorderRadius.circular(16), // Changed from 20 to 16
+                borderRadius: BorderRadius.circular(16),
                 boxShadow: [
                   BoxShadow(
-                      blurRadius: 10, // Changed from 8 to 10
-                      color: Colors.black.withOpacity(0.06), // Changed opacity
-                      offset: const Offset(0, 4)) // Changed offset
+                      blurRadius: 10,
+                      color: Colors.black.withOpacity(0.06),
+                      offset: const Offset(0, 4))
                 ]),
-            width: 60, // Changed from 65 to 60
-            height: 60,  // Changed from 65 to 60
+            width: 60,
+            height: 60,
             child: Icon(
               icon,
               color: Colors.white,
-              size: 30, // Changed from 32 to 30
+              size: 30,
             ),
           ),
           const SizedBox(
-            height: 10, // Changed from 12 to 10
+            height: 10,
           ),
           Text(
             text,
             style: const TextStyle(
-              color: Colors.grey, // Changed color from grey to blueGrey
+              color: Colors.grey,
             ),
           )
         ],
