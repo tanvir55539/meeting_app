@@ -9,9 +9,17 @@ class VideoCallScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Join a meeting'),
       ),
-      body: const Center(
-        child: Text('UI coming soon!'),
+      body: Column(
+        children: [
+          TextField(
+            decoration: const InputDecoration(hintText: 'Room ID'),
+          ),
+          TextField(
+            decoration: const InputDecoration(hintText: 'Name'),
+          ),
+        ],
       ),
     );
   }
 }
+
