@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 
-class VideoCallScreen extends StatelessWidget {
+class VideoCallScreen extends StatefulWidget {
   const VideoCallScreen({super.key});
+
+  @override
+  State<VideoCallScreen> createState() => _VideoCallScreenState();
+}
+
+class _VideoCallScreenState extends State<VideoCallScreen> {
+  bool isAudioMuted = true;
+  bool isVideoMuted = true;
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +29,25 @@ class VideoCallScreen extends StatelessWidget {
           InkWell(
             onTap: () {},
             child: const Text('Join'),
+          ),
+          const SizedBox(height: 20),
+          SwitchListTile(
+            title: const Text('Mute Audio'),
+            value: isAudioMuted,
+            onChanged: (val) {
+              setState(() {
+                isAudioMuted = val;
+              });
+            },
+          ),
+          SwitchListTile(
+            title: const Text('Mute Video'),
+            value: isVideoMuted,
+            onChanged: (val) {
+              setState(() {
+                isVideoMuted = val;
+              });
+            },
           ),
         ],
       ),
