@@ -17,9 +17,13 @@ class VideoCallScreen extends StatelessWidget {
           TextField(
             decoration: const InputDecoration(hintText: 'Name'),
           ),
+          const SizedBox(height: 20),
+          InkWell(
+            onTap: () {},
+            child: const Text('Join'),
+          ),
         ],
       ),
     );
   }
 }
-
